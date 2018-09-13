@@ -28,8 +28,10 @@ run:
 	--restart always \
     --privileged \
     -d kutuni/postgresql-inmemory:10.5
-
-#    -v $(PWD)/postgresql.conf:/postgresql.conf \
+    
+    
+if you change configuration should be mount as below
+   -v $(PWD)/postgresql.conf:/postgresql.conf \
 
 clean:
 	docker rm -f postgres-inmemory
